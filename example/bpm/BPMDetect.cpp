@@ -63,16 +63,16 @@
 
 using namespace soundtouch;
 
-#define INPUT_BLOCK_SAMPLES       2048
-#define DECIMATED_BLOCK_SAMPLES   256
+#define INPUT_BLOCK_SAMPLES       2048 //这里规定输入块是2048
+#define DECIMATED_BLOCK_SAMPLES   256 //提取块是256
 
-typedef unsigned short ushort;
+typedef unsigned short ushort;   //无符号短整型定义为ushort
 
 /// decay constant for calculating RMS volume sliding average approximation 
 /// (time constant is about 10 sec)
 const float avgdecay = 0.99986f;
 
-/// Normalization coefficient for calculating RMS sliding average approximation.
+///Normalization coefficient for calculating RMS sliding average approximation.
 const float avgnorm = (1 - avgdecay);
 
 
